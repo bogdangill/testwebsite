@@ -101,6 +101,8 @@ body {
     }
 
     .promo {margin-top: auto;}
+
+    .wrapper-min .titleMin {margin-top: 5%;}
 }
   
 .header-logo {
@@ -217,6 +219,11 @@ body {
     .advantagesItem {margin-top: calc(1vh * 6.67);}
     .advantagesList {padding-bottom: calc(1vh * 6.67);}
     .history-section {margin-bottom: calc(1vh * 6.22);}
+    .btn {
+        padding-top: calc(1vh * 2.17); padding-bottom: calc(1vh * 2.17);
+        padding-left: 3%;
+        padding-right: 3%;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -242,7 +249,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     /* padding: 13px 20px; */
-    padding: 2.17% 3%;
+    /* padding: 2.17% 3%; */
     text-align: center;
     border: 2px solid #834700;
 }
@@ -394,7 +401,7 @@ body {
     border-right: 1px solid #e5b66c; */
 }
 
-.content {
+.advantages-content {
     /* background: black; */
     flex-basis: 215px;
     flex-grow: 1;
@@ -406,8 +413,11 @@ body {
     padding-left: 7.5vw;
 }
 
+.advantagesItem:last-of-type .advantages-content 
+{border-right: none;}
+
 @media (max-width: 1600px) {
-    .content p {max-width: 205px; margin: 0;}
+    .advantages-content p {max-width: 205px; margin: 0;}
 }
 
 .history-section dt,
@@ -416,6 +426,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: baseline;
     padding: 0;
     margin: 0;
 }
@@ -449,9 +460,32 @@ body {
 
 .press {
     background-color: #ede5d8;
+    position: relative;
+}
+
+.press::before {
+    position: absolute;
+    top: 45.83%;
+    /* width: 41px; */
+    width: 5.13%;
+    height: 5.17%;
+    /* height: 31px; */
+    content: url("../img/quotes.png");
+    /* background-color: #000000; */
 }
 
 .press blockquote {
     padding: 0;
     margin: 0;
 }
+
+.wrapper-min {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.wrapper-min .btn-read {order: 1;}
+.wrapper-min .titleMin {order: 2;}
