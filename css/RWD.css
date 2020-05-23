@@ -157,6 +157,17 @@ body {
     .headerMenu a { padding: 3.33%; }
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    /* overflow: hidden; */
+}
+
 .titleMax {
     color: #000000;
     /* font-size: 40px;
@@ -177,6 +188,16 @@ body {
     text-transform: uppercase;
     padding: 0;
     margin: 0;
+}
+
+.titleMin {
+    font-size: calc( (100vw - 480px)/(1200 - 480) * (20 - 16) + 16px);
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    font-style: normal;
+    /* margin: 0; */
+    padding: 0;
 }
 
 /*вертикальные отступы для девайсов с малым разрешением. рассчеты отступов: высчитываем процентное соотношение margin-max к hmax. затем высчитываем этот процент из hmin. это будет margin-min. затем высчитываем процентное соотношение margin-min к hmax. полученный процент - 2 число в calc. */
@@ -341,16 +362,6 @@ body {
 
 .advantages {
     background-color: #ffcb78;
-}
-
-.titleMin {
-    font-size: calc( (100vw - 480px)/(1200 - 480) * (20 - 16) + 16px);
-    font-weight: bold;
-    color: black;
-    text-transform: uppercase;
-    font-style: normal;
-    /* margin: 0; */
-    padding: 0;
 }
 
 .advantagesList {
