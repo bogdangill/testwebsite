@@ -1,0 +1,441 @@
+/* p.s. отзывчивые шрифты уменьшаются, т.е. резина только для мобильников! */
+/*в функции calc() высчитывается уравнение с двумя неизвестными, модель которой я спер с хабра. коэффициенты взяты с учетом пропорции 480-1200(480 - 40% от 1200), т.е. при ширине экрана 480px шрифты уменьшаются на 40 или 20 процентов от оригинальных размеров при ширине 1200px и более*/
+/*модель такая - заголовки уменьшаются на 40%, обычные шрифты на 20% - отлично подходит для мобильников*/
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: calc( (100vw - 480px)/(1200 - 480) * (16 - 12.8) + 12.8px);
+    line-height: calc( (100vw - 480px)/(1200 - 480) * (30 - 24) + 24px);
+    font-family: "Arial", sans-serif;
+    color: #444444;
+    background-color: white;
+}
+
+/* @media (min-width: 1600px) {
+    body {
+        font-size: calc( (100vw - 1280px)/(1600 - 1280) * (18 - 16) + 16px);
+    }
+}  */
+
+/* .containerWide {
+    width: 84.16%;
+    margin: 0 auto;
+    padding: 0;
+}
+    
+.containerNarrow {
+    width: 66.67%;
+    padding: 0;
+    margin: 0 auto;
+} */
+
+.header {
+    margin: 0;
+    /* padding: 0; */
+    line-height: auto;
+    /* max-height: calc(1vh * 81); */
+    /* padding: 1.12vh 0 2.81vh 0; */
+    padding-top: calc(1vh * 10); /*высчитываю 10% от высоты экрана браузера*/
+    background-image: url("../img/wheat-back.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.promo {
+    /* height: 140px; */
+    margin: 0;
+    padding: 0;
+    /* margin-top: 120px; 2.25% */
+    /* margin-top: 21.82%; */
+    margin-top: calc(1vh * 19.34);
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    font-size: calc( (100vw - 480px)/(1200 - 480) * (70 - 42) + 42px);/*42 - 40% от 70, по пропорции 480-1200, не сокращал для удобства восприятия*/
+    line-height: calc( (100vw - 480px)/(1200 - 480) * (70 - 42) + 42px);
+    color: #ffffff;
+}
+  
+.header,
+.footer {
+    color: #c3c3c3;
+    background-color: #363636;
+}
+
+.header-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+
+    .header > .containerNarrow {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-top {
+        align-self: flex-start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* .promo {margin-top: calc(1vh * 9.34);}  */
+    .promo {margin: 0 auto;}
+}
+
+@media (max-width: 481px) {
+    .header > .containerNarrow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-top {
+        align-self: center;
+    }
+
+    .promo {margin-top: auto;}
+}
+  
+.header-logo {
+    width: 140px;
+    height: 76px;
+    margin: 0;
+    padding: 0;
+}
+  
+.headerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* max-height: 60px; */
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.headerMenu a {
+    text-transform: uppercase;
+    line-height: auto;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-basis: content;
+    flex-grow: 1;
+    flex-shrink: 0;
+    /* background-color: #000000; */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.headerMenu a:hover {
+    color: #ffcb78;
+    border-bottom-color: #ffffff;
+}
+  
+.headerMenu a:active {
+    color: rgba(255,203,120,0.3);
+    border-bottom-color: #ffffff;
+}
+
+@media (max-width: 1000px) {
+    .headerMenu a:not(:first-of-type) {
+        border-top: none;
+    }
+
+    .headerMenu a { padding: 3.33%; }
+}
+
+.titleMax {
+    color: #000000;
+    /* font-size: 40px;
+    line-height: 61px; */
+    font-size: calc( (100vw - 480px)/(1200 - 480) * (40 - 24) + 24px); /*-40%*/
+    line-height: calc( (100vw - 480px)/(1200 - 480) * (61 - 36.6) + 36.6px);/*-40%*/
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.SubTitleMax {
+    color: #000000;
+    /* font-size: 40px;
+    line-height: 61px; */
+    font-size: calc( (100vw - 480px)/(1200 - 480) * (40 - 24) + 24px); /*-40%*/
+    line-height: calc( (100vw - 480px)/(1200 - 480) * (61 - 36.6) + 36.6px);/*-40%*/
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+/*вертикальные отступы для девайсов с малым разрешением. рассчеты отступов: высчитываем процентное соотношение margin-max к hmax. затем высчитываем этот процент из hmin. это будет margin-min. затем высчитываем процентное соотношение margin-min к hmax. полученный процент - 2 число в calc. */
+@media (max-width: 1200px) {
+    /* .new-products {margin-top: calc(1vh * 7);} */
+    .titleMax {margin-bottom: calc(1vh * 6.67); padding-top: calc(1vh * 8);}
+    .new-thing {margin-bottom: calc(1vh * 9.78);}
+    .SubTitleMax {margin-top: calc(1vh * 0.9);}
+    .titleMin {margin-bottom: calc(1vh * 2.22);}
+    .new-products-btns {margin-top: calc(1vh * 5.33);}
+    .stats {margin-top: calc(1vh * 2.22);}
+    .advantagesItem {margin-top: calc(1vh * 6.67);}
+    .advantagesList {padding-bottom: calc(1vh * 6.67);}
+    .history-section {margin-bottom: calc(1vh * 6.22);}
+}
+
+@media (min-width: 1000px) {
+    .header {min-height: 490px;}
+    .headerMenu {flex-direction: row; flex-wrap: wrap; width: 75%;} 
+    .headerMenu a:first-of-type {justify-content: flex-start;}
+    .headerMenu a:last-of-type {justify-content: flex-end;}
+    /* .advantagesItem {min-height: 410px;} */
+}
+
+.price {
+    color: black;
+}
+
+/* кнопки */
+.btn {
+    cursor: pointer;
+    position: relative;
+    font-size: inherit;
+    line-height: calc((100vw - 480px)/(1200 - 480) * (20 - 16) + 16px);/*-20%*/
+    color: #834700;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* padding: 13px 20px; */
+    padding: 2.17% 3%;
+    text-align: center;
+    border: 2px solid #834700;
+}
+
+@media (max-width: 800px) {
+    .btn {
+        border: 1px solid #834700;
+    }
+}
+
+.btn:hover {
+    color: #6a3900;
+    border-color: #6a3900;
+}
+
+.btn:active {
+    color: rgba(106, 57, 0, 0.3);
+    border-color: rgba(106, 57, 0, 0.3);
+}
+
+.btn:disabled {
+    opacity: 0.3;
+}
+
+.btn-buy {
+    color: #ffffff;
+    background-color: #834700;
+}
+
+.btn-buy:hover {
+    color: #ffffff;
+    border-color: #6a3900;
+    background-color: #6a3900;
+}
+
+.btn-buy:active {
+    color: rgba(255, 255, 255, 0.3);
+    border-color: #6a3900;
+    background-color: #6a3900;
+}
+
+.btn-read {
+    color: rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 0, 0, 0.3);
+    background-color: none;
+}
+
+.btn-read:hover {
+    border-color:#a5a097;
+    background-color: #a5a097;
+    color: #ffffff;
+}
+
+.btn-read:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #8f8a81;
+    border-color: #8f8a81;
+}
+/* -------- */
+
+.bottles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.new-thing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    /* max-width: 340px; */
+    flex-basis: 204px;/*400 - 60(padding-left+right) - 40%*/
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0 3.75%;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stats {
+    position: relative;
+    /* min-width: 42%; */
+    /* max-width: 336px; */
+}
+
+.tableIngredients {
+    /* background-color: lawngreen; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    width: calc((100vw - 480px)/(1200 - 480) * (149 - 119.2) + 119.2px)/*-20%*/;
+}
+
+.statsTable {
+    border-collapse: collapse;
+}
+
+.statsTable td {
+    text-transform: uppercase;
+    color: black;
+    font-size: inherit;
+    line-height: calc((100vw - 480px)/(1200 - 480) * (38 - 30.4) + 30.4px)/*-20%*/;
+    font-weight: bold;
+    padding-left: 9px;
+    border: 1px solid #e5e5e5;
+}
+
+.bottle-pic {
+    width: 80%;
+    max-width: 319px;
+    height: auto;
+}
+
+.price {
+    margin-left: 7.6%;
+    color: black;
+}
+
+.advantages {
+    background-color: #ffcb78;
+}
+
+.titleMin {
+    font-size: calc( (100vw - 480px)/(1200 - 480) * (20 - 16) + 16px);
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    font-style: normal;
+    /* margin: 0; */
+    padding: 0;
+}
+
+.advantagesList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.advantagesItem {
+    flex-basis: 240px;/*400 - 40%*/
+    /* min-height: 230px; */
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    border-right: 1px solid #e5b66c; */
+}
+
+.content {
+    /* background: black; */
+    flex-basis: 215px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    border-right: 1px solid #e5b66c;
+    padding-left: 7.5vw;
+}
+
+@media (max-width: 1600px) {
+    .content p {max-width: 205px; margin: 0;}
+}
+
+.history-section dt,
+.history-section dd {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.history-section dd {
+    align-items: center;
+}
+
+.history-section dd p {
+    min-width: 294px;
+    max-width: 36.75%;
+    /* order: 1; */
+}
+
+.history-section cite a {
+    color: #8d5926;
+}
+
+.history-section cite a:hover {
+    color: #6a3900;
+}
+
+.history-section cite a:active {
+    color: rgba(131, 71, 0, 0.3);
+}
+
+@media (min-width: 510px) {
+    .history-section dd p {order: 1;}
+    .history-section dd img {order: 2;}
+}
+
+.press {
+    background-color: #ede5d8;
+}
+
+.press blockquote {
+    padding: 0;
+    margin: 0;
+}
