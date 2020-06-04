@@ -19,25 +19,13 @@ body {
     }
 }  */
 
-/* .containerWide {
-    width: 84.16%;
-    margin: 0 auto;
-    padding: 0;
-}
-
-.containerNarrow {
-    width: 66.67%;
-    padding: 0;
-    margin: 0 auto;
-} */
-
 .header {
     margin: 0;
     /* padding: 0; */
     line-height: auto;
     /* max-height: calc(1vh * 81); */
     /* padding: 1.12vh 0 2.81vh 0; */
-    padding-top: calc(1vh * 10); /*высчитываю 10% от высоты экрана браузера*/
+    padding-top: calc(1vh * 8); /*высчитываю 10% от высоты экрана браузера*/
     background-image: url("../img/wheat-back.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -54,9 +42,9 @@ body {
     /* height: 140px; */
     margin: 0;
     padding: 0;
-    /* margin-top: 120px; 2.25% */
+    /* margin-top: 120px; */
     /* margin-top: 21.82%; */
-    margin-top: calc(1vh * 19.34);
+    margin-top: calc(1vh * 18);
     text-align: center;
     font-family: "Arial", sans-serif;
     font-weight: bold;
@@ -116,8 +104,8 @@ body {
 }
 
 .header-logo, .footer-logo {
-    width: 140px;
-    height: 76px;
+    /* max-width: 100%;
+    height: auto; */
     margin: 0;
     padding: 0;
 }
@@ -221,7 +209,7 @@ body {
 }
 
 /*вертикальные отступы для девайсов с малым разрешением. рассчеты отступов: высчитываем процентное соотношение margin-max к hmax. затем высчитываем этот процент из hmin. это будет margin-min. затем высчитываем процентное соотношение margin-min к hmax. полученный процент - 2 число в calc. */
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
     /* .new-products {margin-top: calc(1vh * 7);} */
     .titleMax {margin-bottom: calc(1vh * 6.67); padding-top: calc(1vh * 8);}
     .new-thing {margin-bottom: calc(1vh * 9.78);}
@@ -240,7 +228,7 @@ body {
 }
 
 @media (min-width: 1000px) {
-    .header {min-height: 490px;}
+    .header {min-height: 510px;}
     .header-top,
     .footer-top {
         display: flex;
@@ -429,7 +417,7 @@ body {
     align-items: flex-start;
     justify-content: space-around;
     border-right: 1px solid #e5b66c;
-    padding-left: 7.5vw;
+    /* padding-left: 7.5vw; */
 }
 
 .advantagesItem:last-of-type .advantages-content
@@ -568,5 +556,5 @@ body {
 }
 
 .footer-dev p {
-  margin-left: 30px; 
+  margin-left: 30px;
 }
