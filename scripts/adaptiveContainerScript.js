@@ -52,14 +52,6 @@ if (advantagesList.clientHeight < 400) {
 //   // firstContainer.classList.remove('containerNarrow');
 //   firstContainer.classList.toggle('containerWide');
 //   console.log('включен широкий контейнер');
-// } else if (window.matchMedia('(min-width: 991.98px)').matches) {
 //   firstContainer.classList.toggle('containerNarrow');
 //   console.log('включен узкий контейнер');
 // } upd. код свое отжил, пусть как раритет останется..
-
-// else if (advantagesList.clientHeight > 755) {
-//   for (var i=0; i < advantagesItems.length; i++) {
-//     advantagesItems[i].style.borderRight = 'none';
-//     console.log('it works!');
-//   }
-// }
