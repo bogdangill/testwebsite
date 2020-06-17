@@ -103,6 +103,18 @@ body {
       justify-content: space-between;
       align-items: center;
     }
+
+    .assortmentTable th:not(:first-of-type):not(:last-of-type),
+    .assortmentTable tr > td:not(:first-of-type):not(:last-of-type) {
+      /* padding-right: 7px; */
+      padding-left: 5px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .assortmentTable sup {
+      margin-left: 0 !important;
+    }
 }
 
 .header-logo, .footer-logo {
@@ -516,6 +528,56 @@ body {
     margin: 0;
 }
 
+.assortmentTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.assortmentTable tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.assortmentTable th {
+  font-size: 11px;
+  line-height: 30px;
+  color: #999999;
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  /* padding-bottom: 30px; */
+  padding-bottom: calc(1vh * 4.55);
+}
+
+.assortmentTable td {
+  text-transform: uppercase;
+  padding: calc(1vh * 2.58) 0;
+  /* padding-bottom: 17px; */
+  /* width: 90px; */
+}
+
+.assortmentTable sup {
+  color: white;
+  font-size: 8px;
+  line-height: 30px;
+  font-weight: bold;
+  background-color: black;
+  border: 1px solid black;
+  padding: 2px 3px;
+  margin-left: 23px;
+  border-radius: 10%;
+}
+
+.assortmentTable td:first-child {
+  color: black;
+  font-weight: bold;
+}
+
+.assortmentTable td:last-child,
+.assortmentTable th:last-child {
+  text-align: right;
+}
+
 .wrapper-min {
     display: flex;
     flex-direction: row;
@@ -530,7 +592,6 @@ body {
 .footer-bottom {
   display: flex;
 }
-
 
 .social {
   display: grid;
