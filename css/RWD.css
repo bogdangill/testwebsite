@@ -211,7 +211,7 @@ body {
 }
 
 /*вертикальные отступы для девайсов с малым разрешением. рассчеты отступов: высчитываем процентное соотношение margin-max к hmax. затем высчитываем этот процент из hmin. это будет margin-min. затем высчитываем процентное соотношение margin-min к hmax. полученный процент - 2 число в calc. */
-@media (max-width: 1600px) {
+@media (max-width: 1199.98px) {
     /* .new-products {margin-top: calc(1vh * 7);} */
     .titleMax {margin-bottom: calc(1vh * 6.67); padding-top: calc(1vh * 8);}
     .new-thing {margin-bottom: calc(1vh * 9.78);}
@@ -228,6 +228,11 @@ body {
         /* padding-left: 3%;
         padding-right: 3%; */
     }
+}
+
+@media (min-width: 1200px) {
+  .main-sec {padding: calc(1vh * 13.64) 0;}
+  .titleMax {margin-bottom: calc(1vh * 9.85);}
 }
 
 @media (min-width: 767.98px) {
@@ -495,7 +500,9 @@ body {
 
 .press::before {
     position: absolute;
-    top: 45.83%;
+    /* top: 45.83%; */
+    top: 15%;
+    right: 10%;
     /* width: 41px; */
     width: 5.13%;
     height: 5.17%;
