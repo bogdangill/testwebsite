@@ -16,7 +16,7 @@ let advantagesItems = document.querySelectorAll('.advantagesItem');
 // пытаюсь убрать лишние border-left у элементов new-thing
 if (bottles.clientWidth > 484){
   for (var i=0; i < newThings.length; i++) {
-    if (i > 0 && i < newThings.length-1) {
+    if (i > 0 && i < newThings.length) {
       // newThings[i].style.backgroundColor = 'red';
       newThings[i].style.borderLeft = 'none';
     }

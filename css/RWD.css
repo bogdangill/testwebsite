@@ -223,9 +223,10 @@ body {
     .advantagesList {padding-bottom: calc(1vh * 6.67);}
     .history-section {margin-bottom: calc(1vh * 6.22);}
     .btn {
-        padding-top: calc(1vh * 2.17); padding-bottom: calc(1vh * 2.17);
-        padding-left: 3%;
-        padding-right: 3%;
+        /* padding-top: calc(1vh * 2.17); padding-bottom: calc(1vh * 2.17); */
+        padding: 10px 3%;
+        /* padding-left: 3%;
+        padding-right: 3%; */
     }
 }
 
@@ -433,6 +434,10 @@ body {
   .advantages-content {
     align-items: center;
   }
+
+  .advantages-content p {
+    text-align: center;
+  }
 }
 
 .advantagesItem:last-of-type .advantages-content
@@ -455,9 +460,11 @@ body {
 
 .history-section dd p {
     min-width: 294px;
-    max-width: 36.75%;
+    max-width: 61%;
     /* order: 1; */
 }
+
+@media (max-width: 991px) {.history-section dd p {max-width: 37%;}}
 
 .history-section cite a {
     color: #8d5926;
