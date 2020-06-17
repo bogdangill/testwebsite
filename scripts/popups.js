@@ -1,6 +1,6 @@
 /*скрипт для всплывающих окон на сайте, которые сообщают о нерабочем состоянии некоторых кнопок*/
 
-let btns = document.querySelectorAll('.btn');
+let btns = document.querySelectorAll('.btn-dis');
 let btnSections = document.querySelectorAll('.whatsnewButtons');
 let popUps = document.querySelectorAll('.pop-up');
 
