@@ -112,9 +112,9 @@ body {
       white-space: nowrap;
     }
 
-    .assortmentTable sup {
+    /* .assortmentTable sup {
       margin-left: 0 !important;
-    }
+    } */
 }
 
 .header-logo, .footer-logo {
@@ -223,7 +223,6 @@ body {
 }
 
 /*вертикальные отступы для девайсов с малым разрешением. рассчеты отступов: высчитываем процентное соотношение margin-max к hmax. затем высчитываем этот процент из hmin. это будет margin-min. затем высчитываем процентное соотношение margin-min к hmax. полученный процент - 2 число в calc. */
-@media (max-width: 1199.98px) {
     /* .new-products {margin-top: calc(1vh * 7);} */
     .titleMax {margin-bottom: calc(1vh * 6.67); padding-top: calc(1vh * 8);}
     .new-thing {margin-bottom: calc(1vh * 9.78);}
@@ -232,7 +231,7 @@ body {
     .new-products-btns {margin-top: calc(1vh * 5.33);}
     .stats {margin-top: calc(1vh * 2.22);}
     .advantagesItem {margin-top: calc(1vh * 6.67);}
-    .advantagesList {padding-bottom: calc(1vh * 6.67);}
+    .advantagesList, .press {padding-bottom: calc(1vh * 6.67);}
     .history-section {margin-bottom: calc(1vh * 6.22);}
     .btn {
         /* padding-top: calc(1vh * 2.17); padding-bottom: calc(1vh * 2.17); */
@@ -240,12 +239,11 @@ body {
         /* padding-left: 3%;
         padding-right: 3%; */
     }
-}
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .main-sec {padding: calc(1vh * 13.64) 0;}
   .titleMax {margin-bottom: calc(1vh * 9.85);}
-}
+} */
 
 @media (min-width: 767.98px) {
     .header {min-height: 510px;}
@@ -552,19 +550,24 @@ body {
 .assortmentTable td {
   text-transform: uppercase;
   padding: calc(1vh * 2.58) 0;
+  /* white-space: nowrap; */
   /* padding-bottom: 17px; */
   /* width: 90px; */
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; */
 }
 
 .assortmentTable sup {
   color: white;
-  font-size: 8px;
-  line-height: 30px;
+  font-size: 0.5em;
+  line-height: inherit;
   font-weight: bold;
   background-color: black;
   border: 1px solid black;
   padding: 2px 3px;
-  margin-left: 23px;
+  margin-left: 4.88%;
   border-radius: 10%;
 }
 
