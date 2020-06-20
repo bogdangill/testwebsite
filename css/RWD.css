@@ -226,6 +226,7 @@ body {
     /* .new-products {margin-top: calc(1vh * 7);} */
     .titleMax {margin-bottom: calc(1vh * 6.67); padding-top: calc(1vh * 8);}
     .new-thing {margin-bottom: calc(1vh * 9.78);}
+    .assortment, .order {padding-bottom: calc(1vh * 9.78);}
     .SubTitleMax {margin-top: calc(1vh * 0.9);}
     .titleMin {margin-bottom: calc(1vh * 2.22);}
     .new-products-btns {margin-top: calc(1vh * 5.33);}
@@ -579,6 +580,35 @@ body {
 .assortmentTable td:last-child,
 .assortmentTable th:last-child {
   text-align: right;
+}
+
+.order {
+  background-color: #ffcb78;
+}
+
+.order-element {
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.25em;
+}
+
+.order input[type="text"],
+.order input[type="number"],
+.order select,
+.order textarea {
+  background-color: #e5b66c;
+  border: none;
+  width: 90%;
+  min-height: calc(1vh * 7.33);
+  margin-top: 8px;
+  margin-bottom: 25px;
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding-left: 20px;
 }
 
 .wrapper-min {
