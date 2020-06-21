@@ -225,7 +225,7 @@ body {
 /*вертикальные отступы для девайсов с малым разрешением. рассчеты отступов: высчитываем процентное соотношение margin-max к hmax. затем высчитываем этот процент из hmin. это будет margin-min. затем высчитываем процентное соотношение margin-min к hmax. полученный процент - 2 число в calc. */
     /* .new-products {margin-top: calc(1vh * 7);} */
     .titleMax {margin-bottom: calc(1vh * 6.67); padding-top: calc(1vh * 8);}
-    .new-thing {margin-bottom: calc(1vh * 9.78);}
+    .new-thing, .order p {margin-bottom: calc(1vh * 9.78);}
     .assortment, .order {padding-bottom: calc(1vh * 9.78);}
     .SubTitleMax {margin-top: calc(1vh * 0.9);}
     .titleMin {margin-bottom: calc(1vh * 2.22);}
@@ -260,6 +260,9 @@ body {
 
     .advantagesItem > .advantages-content p {max-width: 210px; margin: 0;}
     /* .advantagesItem {min-height: 410px;} */
+    .order-form {width: 78.75% !important;}
+    .order-element {flex-basis: 100% !important;}
+    .mainNumber, .extraNumber {flex-basis: 40% !important;}
 }
 
 .price {
@@ -586,29 +589,133 @@ body {
   background-color: #ffcb78;
 }
 
-.order-element {
+.order-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.order-element, .order-checkbox {
   color: black;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.25em;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-basis: 100%;
+  margin-bottom: 1.56em;
 }
 
-.order input[type="text"],
-.order input[type="number"],
-.order select,
-.order textarea {
+.mainNumber, .extraNumber {
+  /* flex-basis: 40%; */
+  flex-grow: 0.3;
+}
+
+.order-element input,
+.order-element select,
+.order-element textarea {
   background-color: #e5b66c;
   border: none;
-  width: 90%;
-  min-height: calc(1vh * 7.33);
-  margin-top: 8px;
-  margin-bottom: 25px;
+  /* min-width: 78.75%; */
+  min-height: 3.2em;
+  /* max-height: calc(1vh * 7.33); */
+  /* min-height: calc(1vh * 7.33); */
+  margin-top: 0.5em;
   color: rgba(0, 0, 0, 0.3);
   font-weight: bold;
-  font-size: 16px;
+  font-size: inherit;
   line-height: 20px;
   text-transform: uppercase;
+  /* padding-left: 20px; */
+}
+
+.order input:hover,
+.order select:hover,
+.order textarea:hover {
+  background-color: #d9ad66;
+}
+
+.order input:focus,
+.order select:focus,
+.order textarea:focus {
+  background-color: #ffffff;
+  color: black;
   padding-left: 20px;
+}
+
+.text-area-counter /*счетчик символов для скрипта*/ {
+  display: none; /* прячу, чтобы потом включить через скрипт, подключая новый класс */
+  position: absolute;
+  top: 65%;
+  right: 2%;
+  /* display: inline-block; */
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+  /* background-color: white; */
+}
+
+.text-area-counter-visible {
+  display: inline-block;
+}
+
+.checkbox input {
+  /* прячу дефолтный чекбокс */
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+  margin: 10px 0 0 20px;
+}
+
+.specialCheckbox {
+  margin-top: 1.5em;
+  position: relative;
+	padding: 0 0 0 60px;
+  cursor: pointer;
+}
+
+.specialCheckbox::before {
+  /* нужен для того, чтоб неактивный фон чекбокса не пропадал */
+  content: '';
+	position: absolute;
+	top: -15px;
+	left: 0;
+	width: 35px;
+	height: 35px;
+	background-color: #d9ad66;
+}
+
+.specialCheckbox::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  background-color: #e5b66c;
+  /* background-color: black; */
+}
+
+.checkbox input:hover + .specialCheckbox::after{
+  background-color: #d9ad66;
+}
+
+.checkbox input:checked + .specialCheckbox::after {
+  /* создаем галочку */
+  top: -4px;
+  left: 10px;
+  width: 13px;
+  height: 6px;
+  border-radius: 1px;
+  background-color: #d9ad66;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .wrapper-min {
