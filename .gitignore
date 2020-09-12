@@ -20,4 +20,7 @@
 # Ignore all local history of files
 .history
 
+# mac os temp dirs ignore
+.DS_Store
+
 # End of https://www.gitignore.io/api/adobe,visualstudiocode

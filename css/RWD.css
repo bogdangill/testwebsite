@@ -19,12 +19,6 @@ body {
   background-color: white;
 }
 
-/* @media (min-width: 1600px) {
-    body {
-        font-size: calc( (100vw - 1280px)/(1600 - 1280) * (18 - 16) + 16px);
-    }
-}  */
-
 .header {
   /*высчитываю 10% от высоты экрана браузера*/
   background-image: url("../img/wheat-back.jpg");
@@ -134,10 +128,6 @@ body {
     text-align: center;
     white-space: nowrap;
   }
-
-  /* .assortmentTable sup {
-      margin-left: 0 !important;
-    } */
 }
 
 .header-logo,
@@ -153,7 +143,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  /* max-height: 60px; */
   margin: 0;
   padding: 0;
   margin-top: 10px;
@@ -280,7 +269,7 @@ body {
   margin-bottom: calc(1vh * 2.22);
 }
 
-.new-products-btns {
+.new-products-btns, .footer-bottom, .wrapper-min {
   margin-top: calc(1vh * 5.33);
 }
 
@@ -322,8 +311,9 @@ body {
   .footer-top {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
+
 
   .headerMenu,
   .footerMenu {
@@ -359,6 +349,11 @@ body {
   .mainNumber,
   .extraNumber {
     flex-basis: 40% !important;
+  }
+
+  .footer-copyright {
+    margin-left: 5%;
+    flex-shrink: 1;
   }
 }
 
@@ -865,15 +860,21 @@ body {
   display: flex;
 }
 
+@media screen and (min-width: 767.98px) {
+  .footer-bottom {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .social {
   display: grid;
-  grid-template-rows: 69px;
-  grid-template-columns: 69px 69px 69px;
-  /* background: red; */
-  /* width: 215px; */
+  grid-template-rows: minmax(46px, 69px);
+  grid-template-columns: repeat(3, minmax(46px, 69px));
 }
 
 .social-btn {
+  box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid #332d24;
 }
@@ -916,19 +917,18 @@ body {
 .footer-dev {
   display: flex;
   align-items: center;
+  flex-basis: 30%;
+  flex-grow: 2;
 }
 
 .footer-dev p {
-  margin-left: 30px;
+  margin-left: 6%;
+  white-space: nowrap;
 }
 
 
 @media (max-width: 767.98px) {
   .footer-copyright p {
     text-align: center;
-  }
-
-  footer>.containerWide {
-
   }
 }
