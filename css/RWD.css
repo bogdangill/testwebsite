@@ -35,11 +35,8 @@ body {
 }
 
 .promo {
-  /* height: 140px; */
   margin: 0;
   padding: 0;
-  /* margin-top: 120px; */
-  /* margin-top: 21.82%; */
   margin-top: calc(1vh * 18);
   text-align: center;
   font-family: "Arial", sans-serif;
@@ -70,7 +67,6 @@ body {
   .header>.variableContainer,
   .footer>.containerWide {
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-between;
     align-items: center;
   }
@@ -82,7 +78,6 @@ body {
     align-items: stretch;
   }
 
-  /* .promo {margin-top: calc(1vh * 9.34);}  */
   .promo {
     margin: 0 auto;
   }
@@ -123,7 +118,6 @@ body {
 
   .assortmentTable th:not(:first-of-type):not(:last-of-type),
   .assortmentTable tr>td:not(:first-of-type):not(:last-of-type) {
-    /* padding-right: 7px; */
     padding-left: 5px;
     text-align: center;
     white-space: nowrap;
@@ -132,8 +126,6 @@ body {
 
 .header-logo,
 .footer-logo {
-  /* max-width: 100%;
-    height: auto; */
   margin: 0;
   padding: 0;
 }
@@ -163,7 +155,6 @@ body {
   flex-basis: content;
   flex-grow: 1;
   flex-shrink: 0;
-  /* background-color: #000000; */
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -210,8 +201,6 @@ body {
 
 .titleMax {
   color: #000000;
-  /* font-size: 40px;
-    line-height: 61px; */
   font-size: calc((100vw - 480px)/(1200 - 480) * (40 - 24) + 24px);
   /*-40%*/
   line-height: calc((100vw - 480px)/(1200 - 480) * (61 - 36.6) + 36.6px);
@@ -223,8 +212,6 @@ body {
 
 .SubTitleMax {
   color: #000000;
-  /* font-size: 40px;
-    line-height: 61px; */
   font-size: calc((100vw - 480px)/(1200 - 480) * (40 - 24) + 24px);
   /*-40%*/
   line-height: calc((100vw - 480px)/(1200 - 480) * (61 - 36.6) + 36.6px);
@@ -240,7 +227,6 @@ body {
   color: black;
   text-transform: uppercase;
   font-style: normal;
-  /* margin: 0; */
   padding: 0;
 }
 
@@ -291,16 +277,8 @@ body {
 }
 
 .btn {
-  /* padding-top: calc(1vh * 2.17); padding-bottom: calc(1vh * 2.17); */
   padding: 10px 3%;
-  /* padding-left: 3%;
-        padding-right: 3%; */
 }
-
-/* @media (min-width: 1200px) {
-  .main-sec {padding: calc(1vh * 13.64) 0;}
-  .titleMax {margin-bottom: calc(1vh * 9.85);}
-} */
 
 @media (min-width: 767.98px) {
   .header {
@@ -337,7 +315,6 @@ body {
     margin: 0;
   }
 
-  /* .advantagesItem {min-height: 410px;} */
   .order-form {
     width: 78.75% !important;
   }
@@ -372,8 +349,6 @@ body {
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
-  /* padding: 13px 20px; */
-  /* padding: 2.17% 3%; */
   text-align: center;
   border: 2px solid #834700;
 }
@@ -446,7 +421,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  /* max-width: 340px; */
   flex-basis: 204px;
   /*400 - 60(padding-left+right) - 40%*/
   flex-grow: 1;
@@ -456,27 +430,18 @@ body {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* @media (min-width: 767.98px) {
-  .new-thing:not(:first-of-type) {border-left: none;}
-} */
-
 .stats {
   position: relative;
-  /* min-width: 42%; */
-  /* max-width: 336px; */
 }
 
 .tableIngredients {
-  /* background-color: lawngreen; */
   position: absolute;
   top: 0;
   right: 0;
   display: flex;
   flex-direction: column;
-  /* align-items: flex-end; */
-  width: calc((100vw - 480px)/(1200 - 480) * (149 - 119.2) + 119.2px)
+  width: calc((100vw - 480px)/(1200 - 480) * (149 - 119.2) + 119.2px);
     /*-20%*/
-  ;
 }
 
 .statsTable {
@@ -487,9 +452,8 @@ body {
   text-transform: uppercase;
   color: black;
   font-size: inherit;
-  line-height: calc((100vw - 480px)/(1200 - 480) * (38 - 30.4) + 30.4px)
+  line-height: calc((100vw - 480px)/(1200 - 480) * (38 - 30.4) + 30.4px);
     /*-20%*/
-  ;
   font-weight: bold;
   padding-left: 9px;
   border: 1px solid #e5e5e5;
@@ -523,26 +487,20 @@ body {
 .advantagesItem {
   flex-basis: 400px;
   /*400 - 40%*/
-  /* min-height: 230px; */
   flex-grow: 1;
   flex-shrink: 4;
   display: flex;
   justify-content: center;
   align-items: center;
   border-right: 1px solid #e5b66c;
-  /* border-right-height: 200px; */
 }
 
 .advantages-content {
-  /* background: black; */
-  /* flex-basis: 210px; */
-  /* flex-grow: 1; */
   flex-shrink: 2;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
-  /* border-right: 1px solid #e5b66c; */
   padding: 0 15px;
 }
 
@@ -582,7 +540,6 @@ body {
 .history-section dd p {
   min-width: 294px;
   max-width: 61%;
-  /* order: 1; */
 }
 
 @media (max-width: 991px) {
@@ -630,15 +587,11 @@ body {
 
 .press::before {
   position: absolute;
-  /* top: 45.83%; */
   top: 15%;
   right: 10%;
-  /* width: 41px; */
   width: 5.13%;
   height: 5.17%;
-  /* height: 31px; */
   content: url("../img/quotes.png");
-  /* background-color: #000000; */
 }
 
 .press blockquote {
@@ -663,20 +616,12 @@ body {
   font-style: normal;
   font-weight: normal;
   text-transform: uppercase;
-  /* padding-bottom: 30px; */
   padding-bottom: calc(1vh * 4.55);
 }
 
 .assortmentTable td {
   text-transform: uppercase;
   padding: calc(1vh * 2.58) 0;
-  /* white-space: nowrap; */
-  /* padding-bottom: 17px; */
-  /* width: 90px; */
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; */
 }
 
 .assortmentTable sup {
@@ -726,7 +671,6 @@ body {
 
 .mainNumber,
 .extraNumber {
-  /* flex-basis: 40%; */
   flex-grow: 0.3;
 }
 
@@ -735,17 +679,13 @@ body {
 .order-element textarea {
   background-color: #e5b66c;
   border: none;
-  /* min-width: 78.75%; */
   min-height: 3.2em;
-  /* max-height: calc(1vh * 7.33); */
-  /* min-height: calc(1vh * 7.33); */
   margin-top: 0.5em;
   color: rgba(0, 0, 0, 0.3);
   font-weight: bold;
   font-size: inherit;
   line-height: 20px;
   text-transform: uppercase;
-  /* padding-left: 20px; */
 }
 
 .order input:hover,
@@ -771,11 +711,9 @@ body {
   position: absolute;
   top: 65%;
   right: 2%;
-  /* display: inline-block; */
   font-weight: normal;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.3);
-  /* background-color: white; */
 }
 
 .text-area-counter-visible {
@@ -816,7 +754,6 @@ body {
   width: 35px;
   height: 35px;
   background-color: #e5b66c;
-  /* background-color: black; */
 }
 
 .checkbox input:hover+.specialCheckbox::after {
