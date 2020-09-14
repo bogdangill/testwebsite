@@ -1,17 +1,16 @@
 /*скрипт для всплывающих окон на сайте, которые сообщают о нерабочем состоянии некоторых кнопок*/
 
 let btns = document.querySelectorAll('.btn');
-let btnSections = document.querySelectorAll('.whatsnewButtons');
 let popUps = document.querySelectorAll('.pop-up');
 
     for (let btn of btns) {
 
-        btn.onclick = function () { //обработчик событий при клике на кнопку
+        btn.onclick = function () {
 
             let hintElement = document.createElement('div');//создаю пустой тег и объявляю его как переменную
             btn.append(hintElement);
             hintElement.classList.add('popup');
-            hintElement.textContent = 'К величайшему сожалению, данная кнопка не работает по причине ленивости разработчика сайта, которому влом создавать отдельные страницы. (ведь это всего лишь учебный макет!) Проявите снисходительность и закройте этот чертов попап, жмакнув на крестик в правом верхнем углу. SPA рулит.';
+            hintElement.textContent = 'Кнопка не работает. Это просто статичный демонстрационный лендинг-пустышка без PHP, API и прочих свистоперделок. Закройте окошко, нажав на крестик, который появится при наведении мыши в правом верхнем углу. Спасибо за внимание.';
             let closeButton = document.createElement('div');
             hintElement.append(closeButton);
             closeButton.classList.add('popup-close');
