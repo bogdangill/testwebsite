@@ -276,10 +276,6 @@ body {
   margin-bottom: calc(1vh * 6.22);
 }
 
-.btn {
-  padding: 10px 3%;
-}
-
 @media (min-width: 767.98px) {
   .header {
     min-height: 510px;
@@ -340,17 +336,20 @@ body {
 
 /* кнопки */
 .btn {
+  box-sizing: border-box;
   cursor: pointer;
   position: relative;
   font-size: inherit;
   line-height: calc((100vw - 480px)/(1200 - 480) * (20 - 16) + 16px);
   /*-20%*/
+  padding: 10px 15px;
   color: #834700;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   border: 2px solid #834700;
+  outline: none;
 }
 
 @media (max-width: 800px) {
@@ -883,14 +882,13 @@ body {
   cursor: auto;
   position: absolute;
   top: 50px;
-  font-size: 10px;
   line-height: normal;
   font-weight: normal;
   text-transform: none;
   padding: 15px;
   border: 1px solid #6a3900;
   border-radius: 5px;
-  background-color: rgba(255, 198, 106, 0.7);
+  background-color: rgb(255, 198, 106);
   color: #444444;
 }
 
@@ -903,8 +901,6 @@ body {
   line-height: 10px;
   padding: 5px;
   margin: 0;
-  /* height: 20px;
-  width: 20px; */
   background-color: rgba(0, 0, 0, 0);
   color: black;
 }
@@ -915,10 +911,4 @@ body {
 
 .popup-close:active {
   background-color: rgba(97, 53, 0, 0.37);
-}
-
-.popup:hover {
-  background-color: rgb(255, 198, 106);
-  /* text-transform: uppercase; */
-  font-size: 16px;
 }
