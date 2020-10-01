@@ -57,6 +57,25 @@ body {
 
 /* размеры шрифта /  */
 
+/* контейнеры */
+
+.container-narrow, .container-wide {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 767.98px) {
+  .container-narrow {
+    width: 66.67%;
+  }
+  
+  .container-wide {
+    width: 84.17%;
+  }
+}
+
+/* контейнеры /  */
+
 .header {
   /* for non-retina (compressed) */
   background-image: url('../img/wheat-back@1x.jpg');
@@ -467,6 +486,12 @@ only screen and (min-resolution: 144dpi)  {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+@media (min-width: 767.98px) {
+  .new-thing:not(:first-of-type) {
+    border-left: none;
+  }
+}
+
 .stats {
   position: relative;
 }
@@ -750,21 +775,16 @@ only screen and (min-resolution: 144dpi)  {
   position: relative;
 }
 
-.text-area-counter
+.counter
 /*счетчик символов для скрипта*/
   {
   display: none;
-  /* прячу, чтобы потом включить через скрипт, подключая новый класс */
   position: absolute;
   top: 88%;
   right: 3%;
   font-weight: normal;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.3);
-}
-
-.text-area-counter-visible {
-  display: inline-block;
 }
 
 .checkbox input {
@@ -920,6 +940,7 @@ only screen and (min-resolution: 144dpi)  {
 .popup /*специальный класс для скрипта*/ {
   cursor: auto;
   position: absolute;
+  z-index: 2;
   top: 50px;
   line-height: normal;
   font-weight: normal;
