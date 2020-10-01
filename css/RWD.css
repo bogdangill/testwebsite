@@ -20,11 +20,23 @@ body {
 }
 
 .header {
-  /*высчитываю 10% от высоты экрана браузера*/
-  background-image: url("../img/wheat-back.jpg");
+  /* for non-retina (compressed) */
+  background-image: url('../img/wheat-back@1x.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-resolution: 1.5dppx),
+only screen and (min-resolution: 144dpi)  {
+
+  /* for retina(compressed) */
+  .header {
+    background-image: url('../img/wheat-back@2x.jpg');
+  }
 }
 
 .header,
