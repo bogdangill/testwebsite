@@ -1,89 +1,77 @@
-.containerWide {
+.container-wide {
   padding: 0 15px;
 }
 
-@media (min-width: 575.98px) {
-  .containerWide {
-    padding: 0 calc(50% - 242.5px);
-  }
-
-  .press::before {
-    top: 45.83%;
-    left: 7.75%;
-    right: 0;
-  }
-}
-
 @media (min-width: 767.98px) {
-  .containerWide {
+  .container-wide {
     padding: 0 calc(50% - 323px);
   }
 }
 
 @media (min-width: 991.98px) {
-  .containerWide {
+  .container-wide {
     padding: 0 calc(50% - 417.5px);
   }
 }
 
 @media (min-width: 1199.98px) {
-  .containerWide {
+  .container-wide {
     padding: 0 calc(50% - 505px);
   }
 }
 
-.containerNarrow {
+.container-narrow {
   padding: 0 30px;
 }
 
 @media (min-width: 575.98px) {
-  .containerNarrow {
+  .container-narrow {
     padding: 0 calc(50% - 192px);
   }
 }
 
 @media (min-width: 767.98px) {
-  .containerNarrow {
+  .container-narrow {
     padding: 0 calc(50% - 256px);
   }
 }
 
 @media (min-width: 991.98px) {
-  .containerNarrow {
+  .container-narrow {
     padding: 0 calc(50% - 330.5px);
   }
 }
 
 @media (min-width: 1199.98px) {
-  .containerNarrow {
+  .container-narrow {
     padding: 0 calc(50% - 400px);
   }
 }
 
-.variableContainer {
+.container-variable {
   padding: 0 15px;
 }
 
 @media (min-width: 575.98px) {
-  .variableContainer {
+  .container-variable {
     padding: 0 calc(50% - 242.5px);
   }
 }
 
 @media (min-width: 767.98px) {
-  .variableContainer {
+  .container-variable {
     padding: 0 calc(50% - 323px);
   }
 }
 
 @media (min-width: 991.98px) {
-  .variableContainer {
+  .container-variable {
     padding: 0 calc(50% - 330.5px);
   }
 }
 
 @media (min-width: 1199.98px) {
-  .variableContainer {
+  .container-variable {
     padding: 0 calc(50% - 400px);
   }
 }

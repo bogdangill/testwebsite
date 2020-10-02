@@ -647,6 +647,15 @@ only screen and (min-resolution: 144dpi)  {
   content: url("../img/quotes.png");
 }
 
+@media (min-width: 575.98px) {
+
+  .press::before {
+    top: 45.83%;
+    left: 7.75%;
+    right: 0;
+  }
+}
+
 .press blockquote {
   padding: 0;
   margin: 0;
