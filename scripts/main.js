@@ -26,6 +26,8 @@ for (let btn of btns) {
     });
 };
 
+// скрипт счетчика символов 
+
 function charCounter(charField) {
     document.getElementById('0').textContent = charField.value.length;
     charField.value.length > 142 ? submitButton.disabled = true : submitButton.disabled = false;

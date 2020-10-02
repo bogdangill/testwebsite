@@ -3,15 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- вьюпорт - один из самых важных тегов для адаптивной резиновой верстки - подгоняет контент под мобильники -->
     <title>Кваст</title>
     <link rel="stylesheet" href="css/RWD.css">
-    <link rel="stylesheet" href="css/responsive-containers.css">
   </head>
   <body>
 
     <header class="header">
-      <div class="variableContainer">
+      <div class="container-narrow">
         <div class="header-top">
           <figure class="header-logo">
             <img class="responsive-logo" src="img/logo.png">
@@ -30,7 +28,7 @@
     </header>
 
     <main>
-      <div class="containerNarrow">
+      <div class="container-narrow">
         <h1 class="visually-hidden">Контент</h1>
         <section class="new-products main-sec">
           <h2 class="text-title_lg">Новинки</h2>
@@ -120,7 +118,7 @@
       </div>
 
       <article class="advantages main-sec">
-        <!-- <div class="containerWide"> -->
+        <div class="container-wide">
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="advantagesList">
             <li class="advantagesItem">
@@ -145,11 +143,11 @@
               </section>
             </li>
           </ul>
-        <!-- </div> -->
+        </div>
       </article>
 
       <article class="history main-sec" id="hist">
-        <div class="containerNarrow">
+        <div class="container-narrow">
           <h2 class="text-title_lg">Немного истории</h2>
           <dl class="history-section">
             <dt>
@@ -175,7 +173,7 @@
       </article>
 
       <section class="press main-sec">
-        <div class="containerNarrow">
+        <div class="container-narrow">
           <h2 class="text-title_lg">Пресса о нас</h2>
           <blockquote>
             <p>Сегодня мы провели дегустацию чего-то действительно новенького — крафтового кваса. Да, да, вы не ослышались! Спасибо Арсену и Руслану за то, что предоставили целую бочку своего напитка!</p>
@@ -188,7 +186,7 @@
       </section>
 
       <section class="assortment main-sec" id="ass)))">
-        <div class="containerNarrow">
+        <div class="container-narrow">
           <h2 class="text-title_lg">Ассортимент</h2>
           <table class="assortmentTable">
             <tr>
@@ -231,7 +229,7 @@
       </section>
 
       <section class="order main-sec" id="wtb">
-        <div class="containerNarrow">
+        <div class="container-narrow">
           <h1 class="text-title_lg">Заказать</h1>
           <p>Не ждите пока нас отрекламируют, как Вятский квас, и мы поднимем цены! Закажите настоящий крафтовый квас сейчас. При заказе от 10 баррелей — скидка 10%.</p>
           <form class="order-form" action="https://какой-то_галимый_сайт.сру" method="post">
@@ -259,10 +257,10 @@
             </div>
             <div class="order-element comment">
               <label class="text-label" for="comment">Доп. комментарий:</label>
-              <div class="text-area-counter">
+              <div class="counter">
                 <span id="0">0</span>/142
               </div>
-              <textarea class="text-area" name="comment" rows="8" cols="25"></textarea>
+              <textarea class="text-area" name="comment" rows="8" cols="25" onfocus="document.querySelector('.counter').style.display='inline-block'" onblur="document.querySelector('.counter').style.display='none'" oninput="charCounter(this)"></textarea>
             </div>
             <div class="order-checkbox">
               <label class="checkbox">
@@ -281,7 +279,7 @@
     </main>
 
     <footer class="footer">
-      <div class="containerWide">
+      <div class="container-wide">
         <div class="footer-top">
           <figure class="footer-logo">
             <img class="responsive-logo" src="img/logo.png">
@@ -309,8 +307,7 @@
         </div>
       </div>
     </footer>
-    <script src="scripts/popups.js"></script>
-    <script src="scripts/charCounter.js"></script>
-    <script src="scripts/adaptiveContainerScript.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- <script src="scripts/adaptiveContainerScript.js"></script> -->
   </body>
 </html>
